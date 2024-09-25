@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 10px;
+}
+
+#company-logo {
+    width: 120px; /* Increased size for better visibility */
+    margin-right: 20px;
+}
+
+.company-details {
+    font-size: 14px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    border-color: #28a745; /* Highlight color on focus */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Styles for PDF */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    #company-logo {
+        width: 120px; /* Ensure the logo is properly sized in the PDF */
+    }
+
+    .company-info {
+        text-align: left;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    p {
+        margin: 0; /* Remove margin for paragraph elements */
+    }
+
+    div {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+

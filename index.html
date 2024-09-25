@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roofing Company Service Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="invoice">
+        <!-- Company Information -->
+        <div class="company-info">
+            <img src="logo2.png">
+            <div class="company-details">
+                <h1>One Day Roofing & siding LTD</h1>
+                <p>122 pineset place NE, Calgary, AB, Canada</p>
+                <p>Phone: +1 (403) 971-9075</p>
+                <p>Email: habtehani@yahoo.com</p>
+            </div>
+        </div>
+
+        <h2>Customer Information</h2>
+        <form id="customer-form">
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name" placeholder="Customer Name" required>
+
+            <label for="customer-address">Address:</label>
+            <input type="text" id="customer-address" placeholder="Customer Address" required>
+
+            <label for="customer-phone">Phone Number:</label>
+            <input type="tel" id="customer-phone" placeholder="Phone Number" required>
+
+            <label for="customer-email">Email:</label>
+            <input type="email" id="customer-email" placeholder="Email Address" required>
+        </form>
+
+        <h2>Service Report</h2>
+        <form id="service-report-form">
+            <label for="service-date">Service Date:</label>
+            <input type="date" id="service-date" required>
+        
+            <label for="roof-type">Type of Roof:</label>
+            <select id="roof-type">
+                <option value="asphalt">Asphalt Shingles</option>
+                <option value="metal">Metal Roofing</option>
+                <option value="tile">Tile Roofing</option>
+                <option value="flat">Flat Roof</option>
+                <option value="slate">Slate Roof</option>
+                <option value="two-story">2 Story</option>
+            </select>
+        
+            <label for="service-needed">Service Needed:</label>
+            <select id="service-needed">
+                <option value="installation">Installation</option>
+                <option value="repair">Repair</option>
+                <option value="inspection">Inspection</option>
+                <option value="replacement">Replacement</option>
+            </select>
+        
+            <label for="bundle">Bundle:</label>
+            <input type="number" id="bundle" required>
+        
+            <label for="ridge-cap">Ridge Cap:</label>
+            <input type="number" id="ridge-cap" required>
+        
+            <label for="starter">Starter:</label>
+            <input type="number" id="starter" required>
+        
+            <label for="valley-flashing">Valley Flashing:</label>
+            <input type="number" id="valley-flashing" required>
+        
+            <label for="drip-edge">Drip Edge:</label>
+            <input type="number" id="drip-edge" required>
+        
+            <label for="ice-and-water">Ice & Water:</label>
+            <input type="number" id="ice-and-water" required>
+        
+            <label for="air-vent">Air Vent:</label>
+            <input type="number" id="air-vent" required>
+        
+            <label for="goosenacks">Goosenacks:</label>
+            <input type="number" id="goosenacks" required>
+        
+            <label for="plumbing-collars">Plumbing Collars:</label>
+            <input type="number" id="plumbing-collars" required>
+        
+            <label for="paper">Paper:</label>
+            <input type="number" id="paper" required>
+        
+            <label for="wall-flashing">Wall Flashing:</label>
+            <input type="number" id="wall-flashing" required>
+        
+            <label for="step-flashing">Step Flashing:</label>
+            <input type="number" id="step-flashing" required>
+        
+            <label for="nails">Nails:</label>
+            <input type="number" id="nails" required>
+        
+            <label for="caulking">Caulking:</label>
+            <input type="number" id="caulking" required>
+        
+            <label for="polywood-sheets">Polywood Sheets:</label>
+            <input type="number" id="polywood-sheets" required>
+
+            <label for="house-size">House Size (sq.ft):</label>
+            <input type="number" id="house-size" required>
+
+            <label for="total-price">Total Price (in CAD):</label>
+            <input type="number" id="total-price" required>
+        
+            <label for="service-cost">Estimated Cost (in CAD):</label>
+            <input type="number" id="service-cost" placeholder="Service Cost" required>
+        </form>
+        
+
+        <!-- Generate PDF Button -->
+        <button onclick="generatePDF()">Generate PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
