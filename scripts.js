@@ -129,11 +129,11 @@ function generatePDF() {
             cellPadding: 5,
         }
     });
-    doc.text(lines, 10, bottomYPosition);
 
     // Footer - Add page number at the bottom
     doc.setFontSize(10);
     doc.text(`Page ${doc.internal.getNumberOfPages()}`, 190, 290, null, null, "right");
+    doc.text(lines, 10, bottomYPosition);
 
     
 
