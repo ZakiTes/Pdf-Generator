@@ -45,7 +45,7 @@ function generatePDF() {
     const warrantyInfo = `House Size: ${houseSize} sq.ft\nTotal Price: ${totalPrice} CAD\nLabor Warranty: 6 years\nShingle Warranty: 25 years (Iko and Owen Duration)`;
     const bottomYPosition = doc.internal.pageSize.getHeight() - 60; 
     const lines = doc.splitTextToSize(warrantyInfo, pageWidth - 20); // Splits text into multiple lines to fit page
-    doc.text(lines, 10, bottomYPosition);
+    
    
     doc.addImage('logo3.png', 'PNG', 10, 10, 40, 20); // Adjust logo size
 
@@ -129,10 +129,13 @@ function generatePDF() {
             cellPadding: 5,
         }
     });
+    doc.text(lines, 10, bottomYPosition);
 
     // Footer - Add page number at the bottom
     doc.setFontSize(10);
     doc.text(`Page ${doc.internal.getNumberOfPages()}`, 190, 290, null, null, "right");
+
+    
 
     // Save the PDF
     //doc.save('service_report.pdf');
