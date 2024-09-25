@@ -135,6 +135,7 @@ function generatePDF() {
     doc.text(`Page ${doc.internal.getNumberOfPages()}`, 190, 290, null, null, "right");
 
     // Save the PDF
-    doc.save('service_report.pdf');
+    //doc.save('service_report.pdf');
+    window.open(doc.output('bloburl'));
 }
 
