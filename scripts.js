@@ -103,7 +103,6 @@ function generatePDF() {
         ['Polywood Sheets', polywoodSheets],
         ['House Size (sq.ft)', houseSize],
         ['Total Price (in CAD)', totalPrice],
-        ['Estimated Cost (CAD)', serviceCost],
     ];
 
     // Use autoTable to display the material quantities
