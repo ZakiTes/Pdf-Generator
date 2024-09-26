@@ -76,6 +76,8 @@ function generatePDF() {
     doc.text(`Email: ${customerEmail}`, 12, 78);
 
     // Service Report Section
+    doc.setFontSize(14);
+    doc.setTextColor(40, 78, 120);
     doc.text(title, xPosition, 95);
 
     doc.setFontSize(10);
