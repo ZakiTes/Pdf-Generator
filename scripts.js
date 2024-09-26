@@ -27,7 +27,6 @@ function generatePDF() {
     const nails = document.getElementById('nails').value;
     const caulking = document.getElementById('caulking').value;
     const polywoodSheets = document.getElementById('polywood-sheets').value;
-
     const houseSize = document.getElementById('house-size').value;
     const totalPrice = document.getElementById('total-price').value;
 
@@ -42,19 +41,19 @@ function generatePDF() {
     const xPosition = (pageWidth - titleWidth) / 2; // Calculate centered position
 
     const warrantyInfo = `House Size: ${houseSize} sq.ft\nTotal Price: ${totalPrice} CAD\nLabor Warranty: 6 years\nShingle Warranty: 25 years (Iko and Owen Duration)`;
-    const bottomYPosition = doc.internal.pageSize.getHeight() - 60; 
+    const bottomYPosition = doc.internal.pageSize.getHeight() - 30; 
     const lines = doc.splitTextToSize(warrantyInfo, pageWidth - 20); // Splits text into multiple lines to fit page
     
    
     doc.addImage('logo2.png', 'PNG', 10, 10, 40, 20); // Adjust logo size
 
     // Company Information Block
-    doc.setFontSize(18);
+    doc.setFontSize(16);
     doc.setFont("helvetica", "bold");
     doc.setTextColor(40, 78, 120); // Dark blue color
     doc.text("One Day Roofing & siding LTD", 60, 15);
     doc.setFontSize(12);
-    doc.setTextColor(0, 0, 0); // Back to black
+    doc.setTextColor(64, 63, 63 ); // Back to black
     doc.text("122 pineset place NE, Calgary, AB, Canada", 60, 25);
     doc.text("Phone: +1 (403) 971-9075", 60, 31);
     doc.text("Email: habtehani@yahoo.com", 60, 37);
@@ -67,8 +66,8 @@ function generatePDF() {
     doc.setFontSize(14);
     doc.setTextColor(40, 78, 120); // Dark blue for section title
     doc.text("Customer Information", 10, 50);
-    doc.setFontSize(12);
-    doc.setTextColor(0, 0, 0); // Black text
+    doc.setFontSize(10);
+    doc.setTextColor(64, 63, 63 ); // Black text
 
     // Customer information
     doc.text(`Name: ${customerName}`, 12, 60);
@@ -79,8 +78,8 @@ function generatePDF() {
     // Service Report Section
     doc.text(title, xPosition, 95);
 
-    doc.setFontSize(12);
-    doc.setTextColor(0, 0, 0); // Black text
+    doc.setFontSize(10);
+    doc.setTextColor(64, 63, 63 ); // Black text
     doc.text(`Service Date: ${serviceDate}`, 10, 102);
 
     // Add the service report table with material quantities
