@@ -27,13 +27,12 @@ function generatePDF() {
     const nails = document.getElementById('nails').value;
     const caulking = document.getElementById('caulking').value;
     const polywoodSheets = document.getElementById('polywood-sheets').value;
-    const serviceCost = document.getElementById('service-cost').value;
 
     const houseSize = document.getElementById('house-size').value;
     const totalPrice = document.getElementById('total-price').value;
 
     // Validate all required fields
-    if (!serviceDate || !roofType || !serviceNeeded || !serviceCost || !houseSize || !totalPrice) {
+    if (!serviceDate || !roofType || !serviceNeeded || !houseSize || !totalPrice) {
         alert('Please fill out all fields.');
         return;
     }
@@ -47,7 +46,7 @@ function generatePDF() {
     const lines = doc.splitTextToSize(warrantyInfo, pageWidth - 20); // Splits text into multiple lines to fit page
     
    
-    doc.addImage('logo3.png', 'PNG', 10, 10, 40, 20); // Adjust logo size
+    doc.addImage('logo2.png', 'PNG', 10, 10, 40, 20); // Adjust logo size
 
     // Company Information Block
     doc.setFontSize(18);
@@ -104,8 +103,7 @@ function generatePDF() {
         ['Caulking', caulking],
         ['Polywood Sheets', polywoodSheets],
         ['House Size (sq.ft)', houseSize],
-        ['Total Price (in CAD)', totalPrice],
-        ['Estimated Cost (CAD)', serviceCost],
+        ['Estimated Cost (CAD)', totalPrice],
     ];
 
     // Use autoTable to display the material quantities
