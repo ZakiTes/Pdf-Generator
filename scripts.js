@@ -53,12 +53,12 @@ function generatePDF() {
     doc.setFontSize(18);
     doc.setFont("helvetica", "bold");
     doc.setTextColor(40, 78, 120); // Dark blue color
-    doc.text("Roofing Company", 60, 15);
+    doc.text("One Day Roofing & siding LTD", 60, 15);
     doc.setFontSize(12);
     doc.setTextColor(0, 0, 0); // Back to black
-    doc.text("1234 Roofing St, Calgary, AB, Canada", 60, 25);
-    doc.text("Phone: +1 (403) 123-4567", 60, 31);
-    doc.text("Email: info@roofingcompany.com", 60, 37);
+    doc.text("122 pineset place NE, Calgary, AB, Canada", 60, 25);
+    doc.text("Phone: +1 (403) 971-9075", 60, 31);
+    doc.text("Email: habtehani@yahoo.com", 60, 37);
 
     // Add a line separator under the company info
     doc.setLineWidth(0.5);
