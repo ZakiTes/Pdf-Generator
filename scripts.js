@@ -51,7 +51,7 @@ function generatePDF() {
     doc.setFontSize(16);
     doc.setFont("helvetica", "bold");
     doc.setTextColor(40, 78, 120); // Dark blue color
-    doc.text("One Day Roofing & siding LTD", 60, 15);
+    doc.text("One Day Roofing & siding LTD", 60, 18);
     doc.setFontSize(12);
     doc.setTextColor(64, 63, 63 ); // Back to black
     doc.text("122 pineset place NE, Calgary, AB, Canada", 60, 25);
