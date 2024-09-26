@@ -47,7 +47,7 @@ function generatePDF() {
     const lines = doc.splitTextToSize(warrantyInfo, pageWidth - 20); // Splits text into multiple lines to fit page
     
    
-    doc.addImage('logo3.png', 'PNG', 10, 10, 40, 20); // Adjust logo size
+    doc.addImage('logo2.png', 'PNG', 10, 10, 40, 20); // Adjust logo size
 
     // Company Information Block
     doc.setFontSize(18);
