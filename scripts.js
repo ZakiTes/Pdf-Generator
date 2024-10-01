@@ -40,7 +40,12 @@ function generatePDF() {
     const pageWidth = doc.internal.pageSize.getWidth();
     const xPosition = (pageWidth - titleWidth) / 2; // Calculate centered position
 
-    const warrantyInfo = `House Size: ${houseSize} sq.ft\nTotal Price: ${totalPrice} CAD\nLabor Warranty: 6 years\nShingle Warranty: 25 years (Iko and Owen Duration)`;
+    const gstRate = 0.05;
+    const gstAmount = totalPrice * gstRate;
+    const totalPriceNumeric = parseFloat(totalPrice);
+    const total = totalPriceNumeric + gstAmount;
+    
+    const warrantyInfo = `House Size: ${houseSize} sq.ft\nPrice ex.GST: ${totalPrice} CAD\nGST (5%): ${gstAmount.toFixed(2)} CAD\nTotal Price inc.GST (5%): ${total.toFixed(2)} CAD\nLabor Warranty: 6 years\nShingle Warranty: 25 years (Iko and Owen Duration)`;
     const bottomYPosition = doc.internal.pageSize.getHeight() - 30; 
     const lines = doc.splitTextToSize(warrantyInfo, pageWidth - 20); // Splits text into multiple lines to fit page
     
