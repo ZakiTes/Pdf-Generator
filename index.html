@@ -106,18 +106,23 @@
             <label for="house-size">House Size (sq.ft):</label>
             <input type="number" id="house-size" required>
 
-            <label for="total-price">Estimated Cost (in CAD):</label>
+            <label for="total-price">Estimated Cost ex.GST(in CAD):</label>
             <input type="number" id="total-price" required>
         </form>
         
 
         <!-- Generate PDF Button -->
         <button onclick="generatePDF()">Generate PDF</button>
+
+        <!-- Generate Invoice Button -->
+        <button onclick="generateInvoice()">Generate Invoice</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
     <script src="scripts.js"></script>
+    <script src="invoice.js"></script>
+
 </body>
 </html>
