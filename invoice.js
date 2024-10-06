@@ -88,22 +88,20 @@ function generateInvoice() {
     const finalY = doc.autoTable.previous.finalY + 20; // Position based on previous table
     doc.setFontSize(14);
     doc.setTextColor(40, 78, 120);
-    doc.text("Summary", margin, finalY);
+    doc.text("Summary", margin, finalY + lineSpacing * 5);
 
     doc.setFontSize(12);
     doc.setTextColor(64, 63, 63);
-    doc.text(`Subtotal (CAD): ${totalPrice.toFixed(2)}`, margin, finalY + lineSpacing);
-    doc.text(`GST (5%): ${gstAmount.toFixed(2)}`, margin, finalY + lineSpacing * 2);
-    doc.text(`Total Amount (CAD): ${totalAmount.toFixed(2)}`, margin, finalY + lineSpacing * 3);
+    doc.text(`Subtotal (CAD): ${totalPrice.toFixed(2)}$`, margin, finalY + lineSpacing * 7);
+    doc.text(`GST (5%): ${gstAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 8.5);
+    doc.text(`Total Amount (CAD): ${totalAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 10);
 
     // Footer - Notes/Terms
     doc.setLineWidth(0.5);
     doc.line(margin, pageHeight - 40, pageWidth - margin, pageHeight - 40); // Line separator
     doc.setFontSize(10);
     doc.text("Terms & Conditions", margin, pageHeight - 30);
-    doc.setFontSize(9);
-    doc.setTextColor(64, 63, 63);
-    doc.text("Payment is due within 30 days from the invoice date. Late payments may incur additional charges.", margin, pageHeight - 22);
+    
 
     // Save the PDF
     window.open(doc.output('bloburl'));
