@@ -77,16 +77,20 @@ function generateInvoice() {
     const finalY = doc.autoTable.previous.finalY + 20; // Position based on previous table
     doc.setFontSize(14);
     doc.setTextColor(40, 78, 120);
-    doc.text("Summary", margin, finalY + lineSpacing * 5);
+    doc.text("Summary", margin, finalY + lineSpacing * 9);
     doc.setFontSize(12);
     doc.setTextColor(64, 63, 63);
-    doc.text(`Subtotal (CAD): ${totalPrice.toFixed(2)}$`, margin, finalY + lineSpacing * 7);
-    doc.text(`GST (5%): ${gstAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 8.5);
-    doc.text(`Total Amount (CAD): ${totalAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 10);
+    doc.text(`Subtotal (CAD): ${totalPrice.toFixed(2)}$`, margin, finalY + lineSpacing * 10.5);
+    doc.text(`GST (5%): ${gstAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 11.5);
+    doc.text(`Total Amount (CAD): ${totalAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 12.5);
     // Footer - Notes/Terms
     doc.setLineWidth(0.5);
-    doc.line(margin, pageHeight - 40, pageWidth - margin, pageHeight - 40); // Line separator
-    doc.setFontSize(10);
+    doc.line(margin, pageHeight - 34, pageWidth - margin, pageHeight - 34); // Line separator
+    doc.setFontSize(8);
+    doc.setTextColor(64, 63, 63); // Gray color
+    doc.text("Thank you for choosing One Day Roofing & Siding LTD.!", margin, pageHeight - 24);
+    doc.text("For any inquiries, please contact us at +1 (403) 971-9075 or email habtehani@yahoo.com.", margin, pageHeight - 18);
+
     
     // Save the PDF
     window.open(doc.output('bloburl'));
