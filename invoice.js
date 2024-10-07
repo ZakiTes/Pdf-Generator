@@ -83,6 +83,22 @@ function generateInvoice() {
     doc.text(`Subtotal (CAD): ${totalPrice.toFixed(2)}$`, margin, finalY + lineSpacing * 10.5);
     doc.text(`GST (5%): ${gstAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 11.5);
     doc.text(`Total Amount (CAD): ${totalAmount.toFixed(2)}$`, margin, finalY + lineSpacing * 12.5);
+
+    // Payment Method Section
+    const finalYWithSummary = finalY + lineSpacing * 15;
+    doc.setFontSize(14);
+    doc.setTextColor(40, 78, 120);
+    doc.text("Payment Method", margin, pageHeight - 120);
+
+    doc.setFontSize(12);
+    doc.setTextColor(64, 63, 63);
+    doc.text("Bank Name: TD canada trust.", margin, pageHeight - 112);
+    doc.text("Account Number: 0000 0000 0000", margin, pageHeight - 106);
+    doc.text("IBAN: ZT14IHNLN6897565 78967", margin, pageHeight - 100);
+    doc.text("SWIFT/BIC: 6769870909", margin, pageHeight - 94);
+    //doc.text("PayPal: payments@onedayroofing.com", margin, pageHeight - 88); 
+    
+    
     // Footer - Notes/Terms
     doc.setLineWidth(0.5);
     doc.line(margin, pageHeight - 34, pageWidth - margin, pageHeight - 34); // Line separator
